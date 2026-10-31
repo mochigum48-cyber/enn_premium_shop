@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Lunelle</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
@@ -13,38 +14,34 @@
     <!-- Header -->
     <header>
         <div class="header-left">
-            <div class="logo-icon">🦋</div>
+            <div class="logo-icon"><i class="fa-solid fa-dove" style="color: #8A6B8E;"></i></div>
             <div class="header-text">
                 <span class="welcome">WELCOME TO</span>
-                <span class="brand-name">Lunelle</span>
+                <span class="brand-name">ENN SHOP</span>
             </div>
         </div>
         <div class="header-right">
-            <button id="mute-btn" class="sound-btn">🔇</button>
-            <div class="notification-icon">🔔</div>
+            <button id="mute-btn" class="sound-btn"><i class="fa-solid fa-volume-xmark"></i></button>
+            <button id="change-song-btn" class="sound-btn"><i class="fa-solid fa-rotate-right"></i></button>
+            <div class="notification-icon"><i class="fa-regular fa-bell"></i></div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Promo Banner -->
+    <!-- Page 1: Home -->
+    <main id="page-home">
         <div class="promo-banner">
-            <div class="badge">✨ Glow up your socials</div>
+            <div class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Boost up your socials</div>
             <h1>Make your online <br><i>world sparkle.</i></h1>
             <p>Premium social growth and game top-ups, all in one magical place.</p>
-            <button class="explore-btn">Explore services <span style="font-size: 16px;">›</span></button>
-            
-            <div class="butterfly-art">🦋</div>
-            <div class="star-art">✦</div>
+            <button class="explore-btn">Explore services <i class="fa-solid fa-chevron-right" style="font-size: 12px;"></i></button>
+            <div class="butterfly-art"><i class="fa-solid fa-star"></i></div>
         </div>
 
-        <!-- Search Bar -->
         <div class="search-container">
-            <span class="search-icon">🔍</span>
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
             <input type="text" placeholder="What are you looking for?">
         </div>
 
-        <!-- Category Section -->
         <div class="section-header">
             <div>
                 <span class="small-title">FIND YOUR FAVORITE</span>
@@ -55,51 +52,98 @@
 
         <div class="category-grid">
             <div class="category-card">
-                <div class="cat-icon bg-pink">🌐</div>
+                <div class="cat-icon bg-pink">
+                    <i class="fa-brands fa-instagram" style="color: #E1306C;"></i>
+                </div>
                 <span class="cat-name">Instagram</span>
-                <span class="arrow">›</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
-            <div class="category-card">
-                <div class="cat-icon bg-gray">🎵</div>
+            <!-- အစ်မ ပို့ထားတဲ့ TikTok လိုဂို SVG -->
+            <div class="category-card" onclick="openItem('TikTok Likes', '2,820')">
+                <div class="cat-icon bg-black">
+                    <svg width="18" height="18" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#25F4EE" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                        <path fill="#FE2C55" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" transform="translate(-10, 10)"/>
+                        <path fill="#fff" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                    </svg>
+                </div>
                 <span class="cat-name">TikTok</span>
-                <span class="arrow">›</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
             <div class="category-card">
-                <div class="cat-icon bg-red">🛒</div>
+                <div class="cat-icon bg-red"><i class="fa-brands fa-youtube" style="color: #FF0000;"></i></div>
                 <span class="cat-name">YouTube</span>
-                <span class="arrow">›</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
             <div class="category-card">
-                <div class="cat-icon bg-purple">🎮</div>
+                <div class="cat-icon bg-purple"><i class="fa-solid fa-gamepad" style="color: #8A6B8E;"></i></div>
                 <span class="cat-name">Games</span>
-                <span class="arrow">›</span>
+                <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
         </div>
     </main>
 
+    <!-- Page 2: Wallet (ငွေဖြည့်) -->
+    <main id="page-wallet" style="display: none;">
+        <div class="wallet-card">
+            <span class="small-title">YOUR BALANCE</span>
+            <h1 class="balance-amount">Ks 0</h1>
+            <p>Min top-up: 5,000 Ks</p>
+        </div>
+        
+        <div class="topup-section">
+            <h3>Add Money</h3>
+            <input type="number" id="topup-amount" placeholder="Enter amount (Min 5000)" class="topup-input">
+            <button class="topup-btn" onclick="requestTopup()">Top Up Now</button>
+        </div>
+    </main>
+
+    <!-- Page 3: Item Detail (ပစ္စည်းဝယ်တဲ့ စာမျက်နှာ) -->
+    <main id="page-item" style="display: none;">
+        <div class="item-header">
+            <button class="back-btn" onclick="switchTab('home')"><i class="fa-solid fa-arrow-left"></i></button>
+            <h2 id="item-title">TikTok Likes</h2>
+        </div>
+        <div class="item-detail-card">
+            <div class="item-detail-icon bg-black">
+                <svg width="40" height="40" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#25F4EE" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                    <path fill="#FE2C55" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" transform="translate(-10, 10)"/>
+                    <path fill="#fff" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                </svg>
+            </div>
+            <h3>TikTok Likes (မြန်မာ)</h3>
+            <p class="item-price" id="item-price">2,820.00 ကျပ်</p>
+            <p class="item-desc">မှာယူမှုစတင်ပြီးပါက ၁ နာရီအတွင်း စတင်လုပ်ဆောင်ပါမည်။</p>
+            
+            <label class="input-label">သင့် TikTok Username ထည့်ပါ</label>
+            <input type="text" class="item-input" placeholder="@username">
+
+            <button class="buy-btn" onclick="buyItem()">Buy Now</button>
+        </div>
+    </main>
+
     <!-- Bottom Nav -->
-    <nav class="bottom-nav">
-        <div class="nav-item active">
-            <span class="icon">🏠</span>
+    <nav class="bottom-nav" id="bottom-nav">
+        <div class="nav-item active" id="nav-home" onclick="switchTab('home')">
+            <i class="fa-solid fa-house icon"></i>
             <span class="text">Home</span>
         </div>
-        <div class="nav-item">
-            <span class="icon">📋</span>
+        <div class="nav-item" id="nav-orders">
+            <i class="fa-solid fa-receipt icon"></i>
             <span class="text">Orders</span>
         </div>
-        <div class="nav-item">
-            <span class="icon">👛</span>
+        <div class="nav-item" id="nav-wallet" onclick="switchTab('wallet')">
+            <i class="fa-solid fa-wallet icon"></i>
             <span class="text">Wallet</span>
         </div>
-        <div class="nav-item">
-            <span class="icon">👤</span>
+        <div class="nav-item" id="nav-profile">
+            <i class="fa-regular fa-user icon"></i>
             <span class="text">Profile</span>
         </div>
     </nav>
 
-    <!-- သီချင်းသံ ဖိုင် -->
     <audio id="bgm" src="bgm.mp3" loop></audio>
-    
     <script src="app.js"></script>
 </body>
 </html>
